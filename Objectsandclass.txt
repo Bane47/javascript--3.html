@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function abstract(){
+            var name= document.getElementById("name").value;
+            var age= document.getElementById("age").value;
+            var gender= document.getElementById("gen").value;
+            var address= document.getElementById("address").value;
+            var empcode= document.getElementById("empcode").value;
+            var dept= document.getElementById("dept").value;
+            var design= document.getElementById("design").value;
+            var salary= document.getElementById("salary").value;
+    class person{
+    constructor(personName,age,gender,address){
+        this.personName=personName;
+        this.age=age;
+        this.gender=gender;
+        this.address=address;
+    
+    if (this.constructor == person){
+        throw new error("Abstract class");
+    }
+    }
+    display(){
+        throw new error("No implementation of abstract method")
+    }
+    
+}
+
+class employee extends person{
+    constructor(personName,age,gender,address,emp_code,dept,design,salary){
+        super(personName,age,gender,address);
+        this.emp_code=emp_code;
+        this.dept=dept;
+        this.design=design;
+        this.salary=salary;
+    }
+    
+    display(){
+        document.write(obj.personName+" "+obj.age+" "+obj.gender+" "+obj.address+" "+obj.emp_code+" "+obj.dept+" "+obj.design+" "+obj.salary);
+    }
+
+}
+
+var obj = new employee(name,age,gender,address,empcode,dept,design,salary);
+obj.display();
+
+}
+
+    </script>
+    Name: <input type="text" id="name"><br><br>
+    Age: <input type="number" id="age"><br><br>
+    Gender: <input type="male" id="gen"><br><br>
+    Address: <input type="text" id="address"><br><br>
+    Enployee_code: <input type="text" id="empcode"><br><br>
+    Department: <input type="text" id="dept"><br><br>
+    Design: <input type="text" id="design"><br><br>
+    Salary: <input type="number" id="salary"><br><br>
+    <button onclick="abstract()">Submit</button>
+
+
+</body>
+</html>
